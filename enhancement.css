@@ -1,0 +1,179 @@
+html{
+    background: rgb(10,1,24);
+    background-image: radial-gradient(ellipse at center, rgb(47, 7, 77) 0%, rgba(0,0,0,1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Roboto Mono', monospace;
+}
+.screen {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: 
+      repeating-linear-gradient(
+        45deg, transparent,
+        transparent 1px, 
+        rgba(0, 0, 0, .7) 10px, 
+        rgba(255,255,255, 1) 10px
+      );
+    z-index: -1;
+  }
+
+a {
+    text-decoration: none;
+}
+
+header {
+    color: rgb(255, 232, 131);
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+#calamity{
+    background-image: url('/calamity/glimpse');
+}
+
+#pseudo{
+    background-image: url('/pseudo/glimpse');
+}
+
+#archive{
+    background-image: url('/archive/glimpse');
+}
+
+#directory{
+    font-weight: 200;
+    font-size: 10vmin;
+    letter-spacing: 4vmin;
+    margin: 3rem 0 1rem 0;
+}
+
+#hub {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80vw;
+    margin: 2rem auto;
+}
+
+.portal {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: rgb(176, 151, 190);
+    min-height: 50vh;
+    aspect-ratio: 6/8;
+    border-radius: 1rem;
+    border: 0.125rem solid whitesmoke;
+    background-size: cover;
+    color: whitesmoke;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    margin: 0.7rem;
+}
+
+.current_reveal {
+    margin-bottom: 7vh;
+    order: 1;
+}
+
+.next_reveal {
+    margin-top: 7vh;
+    order: 0;
+}
+
+.last_reveal {
+    margin-top: 7vh;
+    order: 2;
+}
+
+.designation {
+    font-weight: 600;
+    letter-spacing: 0.75vmin;
+    font-size: 2.125rem;
+    margin: 2rem;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+}
+
+.patreon {
+    position: absolute;
+    background-color: #FF424D;
+    border-radius: 5px;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0.3rem;
+    right: 3rem;
+    top: 3rem;
+}
+
+.word {
+    height: 2rem;
+}
+
+.request{
+    color: whitesmoke;
+    display: none;
+    width: 80%;
+    text-align: center;
+    font-size: 2rem;
+    margin: 1rem 0 3rem 0;
+    order: 5;
+}
+
+@media only screen and (max-width: 1199px){
+    #hub{
+        flex-direction: column;
+    }
+
+    header{
+        height: 14vh;
+    }
+
+    #directory {
+        font-size: 7vmin;
+    }
+
+    .current_reveal{
+        margin-bottom: 1rem;
+        order: 0;
+    }
+
+    .last_reveal{
+        margin-bottom: 1rem;
+        order:1;
+    }
+
+    .next_reveal{
+        margin-bottom: 3rem;
+        order: 2;
+    }
+
+    .portal{
+        height: 50vh;
+        width: 67vw;
+    }
+
+    .bootan{
+        display: none;
+        height: 0;
+    }
+
+    .request{
+        display: block;
+    }
+}
+
+@media only screen and (max-height:600px){
+    header{
+        height: auto;
+    }
+}

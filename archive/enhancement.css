@@ -1,0 +1,126 @@
+html{
+    background: rgb(10,1,24);
+    background-image: radial-gradient(ellipse at center, rgb(47, 7, 77) 0%, rgba(0,0,0,1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#archive-thumbnail{
+    background-image: url('/archive/glimpse');
+    background-size: cover;
+}
+
+h1 {
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+}
+
+.expanded {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    height: 87vh;
+    aspect-ratio: 6/8;
+    max-width: 87vw;
+    border: 0.125rem solid whitesmoke;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.777);
+    z-index: 2;
+}
+
+#overlay {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: 
+      repeating-linear-gradient(
+        45deg, transparent,
+        transparent 1px, 
+        rgba(0, 0, 0, .7) 10px, 
+        rgba(255,255,255, 1) 10px
+      );
+    z-index: -1;
+    cursor: default;
+}
+
+.thumbnail {
+    display: flex;
+    background-color: rgba(43, 21, 61, 0.777);
+    margin: 1rem;
+    color: whitesmoke;
+    height: 17%;
+    width: 90%;
+    align-items: center;
+    text-align: center;
+    border-radius: 1rem;
+    border: 0.125rem solid whitesmoke
+}
+
+#ta-003-head{
+    background-image: url('/archive/ta-003/glimpse');
+    background-size: cover;
+}
+
+.thumbnail h1 {
+    margin: 0 auto;
+    font-size: 3rem;
+}
+
+.chapters{
+    width: 100%;
+    height: 75%;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.chapters::-webkit-scrollbar{
+    display: none;
+}
+
+.chapter{
+    width: 90%;
+    padding: 0;
+    margin: 0.75rem auto;
+}
+
+.chapter-head {
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    border: 0.125rem solid whitesmoke;
+    border-radius: 0.5rem;
+    margin-top: 0;
+    color: whitesmoke;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.parts{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.part {
+    display: flex;
+    color: whitesmoke;
+    min-width: 3.27rem;
+    min-height: 3.27rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0.5rem;
+    border: 0.125rem solid whitesmoke;
+    margin: 0.7rem;
+    padding: 0 0.27rem;
+}
