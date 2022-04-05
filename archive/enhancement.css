@@ -6,6 +6,10 @@ html{
     font-family: 'Roboto Mono', monospace;
 }
 
+a{
+    text-decoration: none;
+}
+
 #archive-thumbnail{
     background-image: url('/archive/glimpse');
     background-size: cover;
